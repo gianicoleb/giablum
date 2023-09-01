@@ -10,12 +10,12 @@
 
 /* Variables */
 :root {
-  --font-family: "Roboto", sans-serf;
+  --font-family: "Merriweather", serif;
   --normal-font: 400;
   --bold-font: 700;
   --bolder-font: 900;
-  --bg-color: #fcfcfc;
-  --primary-color: #4756df;
+  --bg-color: #fff9da;
+  --primary-color: #000000;
   --secondary-color: #ff7235;
   --primary-shadow: #8b8eaf;
   --secondary-shadow: #a17a69;
@@ -23,6 +23,7 @@
   --bottom-margin-2: 1rem;
   --line-height: 1.7rem;
   --transition: 0.3s;
+  --text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
 /* Variables end */
 
@@ -35,6 +36,39 @@ html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+.intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url(rainbow.gif);
+    background-repeat: no-repeat;
+    background-position:center center;
+    background-size:cover;
+    opacity: 1;
+    transition: opacity 0.2s ease-in-out;
+}
+.title {
+    font-size: 4em;
+    font-weight:bold;
+    color: #3e071f;
+    opacity: 0;
+    animation: fadeIn 0.2s forwards 0.2s;
+}
+.subtitle {
+    font-size: 20px; /* Adjust this value to your liking */
+    margin-top: 20px; /* Adjust this value for the desired spacing */
+    color: #777; /* You can adjust this to any color you want */
+  }
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+.main-content {
+    display: none; /* Initially hide the main content */
 }
 
 ul {
@@ -63,7 +97,11 @@ nav {
     align-items: center;
     justify-content: space-between;
     padding: 1.5rem 3.5rem;
+    background-image:url('rainbow.gif');
+    background-size:cover;
+    background-position: center center;
     background-color: var(--bg-color);
+
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
   }
 
@@ -108,11 +146,12 @@ nav {
   }
 
   .hero img {
-    height: 37.5rem;
-    width: 37.5rem;
+    height: 30rem;
+    width: 30rem;
   }
   
   .bio {
+    background-color:#f1deff;
     width: 25rem;
     padding: 0.625rem;
     border-radius: 6px;
@@ -129,8 +168,17 @@ nav {
   }
 
   .more-about {
-    background-color: var(--bg-color);
+    background-color: #ffdfdf;
     padding: 1rem 6rem;
+    width:50%;
+    margin: 20px auto;
+    padding:20px;
+    border: 1px solid #000;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px var(--secondary-shadow);
+
+
+
   }
   
   .more-about h2 {
@@ -144,10 +192,10 @@ nav {
   }
 
   .skills {
-    max-width: 68.75rem;
+    max-width: 80rem;
     margin: auto;
     text-align: center;
-    margin-top: 2.5rem;
+    margin-top: 2rem;
   }
   
   .skill-header {
@@ -211,7 +259,7 @@ nav {
   }
   
   .project-card {
-    background-color: #fff;
+    background-color:  #ffffff;
     border-radius: 11px;
     box-shadow: 0 3px 10px var(--primary-shadow);
     padding: 20px;
@@ -264,7 +312,7 @@ nav {
     width: 100%;
     padding: 10px;
     margin: 10px 0;
-    background-color: #fff;
+    background-color: #efd3ff;
     border: 2px solid var(--primary-color);
     border-radius: 5px;
     font-size: 1rem;
